@@ -1,4 +1,197 @@
+/* ----- Reset ----- */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+/* Set core body defaults */ 
+
+body {
+    text-rendering: optimizeSpeed;
+}
+
+/* Set core root defaults */ 
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */ 
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for 
+people that prefer not to see them */ 
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ----- Reset done ------ */
+
+
+
 /* Fonts 
 font-family: 'Inter', sans-serif;
 font-family: 'Lexend Deca', sans-serif; */
 
+/* Colors */
+
+:root {
+    --main-bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading-color: hsl(0, 0%, 100%);
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stats-color: hsla(0, 0%, 100%, 0.6);
+
+}
+/* Typography */ 
+
+body {
+    font-size: .9rem;
+    font-family: 'Luxend Deca', sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    background-color: var(--main-bg-color);
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    color: var(--main-heading-color);
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+h2 {
+    margin-bottom: .2em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* Layout */
+
+
+header {
+    background-image: url("images/image-header-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: var(--accent);
+    min-height: 250px;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    margin-top: 1em;
+    background-color: var(--card-bg-color);
+}
+
+.main-content {
+    color: var(--main-paragraph-color);
+    padding: 2em 2em;
+}
+
+.main-text {
+    padding: 0 1.5em;
+}
+
+
+.stats {
+    color: var(--stats-color);
+}
+
+.margin-bottom {
+    margin-bottom: 2em;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+
+@media (min-width:860px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        text-align: left;
+        max-width: 97%;
+    }
+
+    .stats p {
+        margin: 0;
+    }
+
+    .main-text {
+        padding: 0;
+        margin: 2.5em 0 4em 0;
+    }
+
+    .main-content {
+        padding: 3em 5em;
+    }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .col1 {
+        min-width: 50%;
+        order: 2;
+    }
+
+    .col2 {
+        min-width: 50%;
+    }
+
+    header {
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 0;
+        background-image: url(images/image-header-desktop.jpg);
+    }
+
+}
