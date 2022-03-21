@@ -110,7 +110,7 @@ h2 {
 header {
     background-image: url("images/image-header-mobile.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-blend-mode: multiply;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -150,7 +150,14 @@ header {
 }
 
 
-@media (min-width:860px) {
+@media (min-width: 450px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+
+@media (min-width:820px) {
     body {
         height: 100vh;
         display: flex;
@@ -191,6 +198,7 @@ header {
     header {
         border-top-right-radius: 1rem;
         border-top-left-radius: 0;
+        border-bottom-right-radius: 1rem;
         background-image: url(images/image-header-desktop.jpg);
     }
 
